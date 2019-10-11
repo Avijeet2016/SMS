@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <div class="card">
+            <div class="card-header text-center">Student Details</div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Name        :</strong>&nbsp;{{ std.student.name }}<br></li>
+                    <li><strong>Fathers Name:</strong>&nbsp;{{ std.student.fathers_name }}<br></li>
+                    <li><strong>Address     :</strong>&nbsp;{{ std.student.address }}<br></li>
+                    <li><strong>Class       :</strong>&nbsp;{{ std.std_class.class_name }}<br></li>
+                    <li><strong>Roll        :</strong>&nbsp;{{ std.student.roll }}<br></li>
+                    <li><strong>Age         :</strong>&nbsp;{{ std.student.age }}<br></li>
+                    <li><strong>Shift       :</strong>&nbsp;{{ std.std_shift }}<br></li>
+                    <li><strong>Session     :</strong>&nbsp;{{ std.std_session }}<br></li>
+                    <li><strong>Section     :</strong>&nbsp;{{ std.std_section }}<br></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+{% endblock %}
+
+
+std_name = forms.cleaned_data['name']
+            fathers_name = forms.cleaned_data['fathers_name']
+            roll = forms.cleaned_data['roll']
+            std_age  = forms.cleaned_data['age']
+            std_gender = forms.cleaned_data['gender']
+            address = forms.cleaned_data['address']
+            std_class = forms.cleaned_data['std_class']
+            std_shift = forms.cleaned_data['std_shift']
+            std_session = forms.cleaned_data['std_session']
+            std_section = forms.cleaned_data['std_section']

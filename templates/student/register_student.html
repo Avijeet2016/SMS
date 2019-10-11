@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <div class="card" >
+            <div class="card-header">
+                <strong>Register New Student</strong>
+            </div>
+            <div class="card-body">
+                <form action="" method="post"> {% csrf_token %}
+                    {{ form1.as_p }}
+                    {{ form2.as_p }}
+                    {{ form1.errors}}
+                    {{ form2.errors}}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

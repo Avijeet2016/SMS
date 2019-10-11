@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+  <div class="card">
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i> Teacher List</div>
+    <div class="card-body">
+        <table class="table table-responsive-sm">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for t in teachers %}
+              <tr>
+                  <th scope="row">{{ forloop.counter}}</th>
+                  <td>{{ t.name }}</td>
+                  <td>{{ t.age }}</td>
+                  <td>{{ t.gender }}</td>
+                  <td>{{ t.phone_number }}</td>
+                  <td>{{ t.designation }}</td>
+                  <td><a class="btn btn-primary" href="{% url 'edit-teacher' t.id %}">Edit</a>
+                  <a class="btn btn-danger" href="{% url 'delete-teacher' t.id %}">Delete</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+      </div>
+    </div>
+
+
+{% endblock %}
